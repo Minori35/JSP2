@@ -47,34 +47,65 @@
 
 // *********************************Arreglos*************************
  
-var arr =[
+// var arr =[
 
-     true, 
-     {
-        nombre: "sayra",
-        apellidos : "Herrera"
-     },
-     function(){
-        console.log("Estoy viviendo en un arreglo");
-     },
-     function(persona){
-        console.log(persona.nombre + " " + persona.apellido);
-     },
-     ["Fernando", "Carlos", "Sayra", "Bruno",
+//      true, 
+//      {
+//         nombre: "sayra",
+//         apellidos : "Herrera"
+//      },
+//      function(){
+//         console.log("Estoy viviendo en un arreglo");
+//      },
+//      function(persona){
+//         console.log(persona.nombre + " " + persona.apellido);
+//      },
+//      ["Fernando", "Carlos", "Sayra", "Bruno",
        
-     [
-         "Juan",
-         "Pedro",
-        "otro"]
-    ]
-]
-console.log(arr);
+//      [
+//          "Juan",
+//          "Pedro",
+//         "otro"]
+//     ]
+// ]
+// console.log(arr);
 
-console.log(arr[0]);
-console.log(arr[1]);
+// console.log(arr[0]);
+// console.log(arr[1]);
 
-arr[2]();
-arr[3](arr[1]);
+// arr[2]();
+// arr[3](arr[1]);
 
-console.log(arr[4][3][1  ]);
+// console.log(arr[4][3][1  ]);
 
+// *********************************Arreglos parte 2*************************
+
+// function miFuntion(){
+//     console.log(arguments);
+// }
+
+// miFuntion();
+
+// *********************************sobreCarga*************************
+
+function crearProducto(nombre, precio){
+    nombre = nombre || "sin nombre"
+    precio = precio || 0;
+
+    console.log("Producto :", nombre, "precio", precio);
+
+}
+
+function crearProducto100(nombre){
+    crearProducto(nombre, 100);
+}
+
+function crearProductoCamisa(precio){
+    crearProducto("camisa", precio)
+}
+
+
+crearProducto("lapiz");
+crearProducto100("Corrector");
+
+crearProductoCamisa(100)
