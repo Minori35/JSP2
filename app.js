@@ -112,32 +112,59 @@
 
 // *********************************Polimotfismo*************************
 
-function determinaDato(){
-    if(a === undefined){
-        console.log("A es undefine.....no se que");
+// function determinaDato(){
+//     if(a === undefined){
+//         console.log("A es undefine.....no se que");
+//     }
+
+//     if(typeof a=== "number"){
+//         console.log("A es un numero y puedo hacer operaciones");
+//     }
+//     if(typeof a=== "string"){
+//         console.log("A es un texto  y puedo hacer operaciones con texto");
+//     }
+
+//     if(typeof a=== "object"){
+//         console.log("A es un obejto  y puedo hacer operaciones con objeto");
+
+//         if(a instanceof Number){
+//             console.log("Es un objeto ");
+//         }
+//     }
+
+
+// }
+
+
+// var b = new Number(3);
+
+// console.log(b);
+
+// determinaDato()
+
+// *********************************Cuidado con las funciones y sus contextos*************************
+
+function crearFunciones(){
+    var arr = [];
+    var numero = 1;
+
+    for(var numero =1 ; numero <=3; numero ++){
+        arr.push(
+            (function(numero){
+                return function(){
+                    console.log(numero)
+                } 
+            })(numero))
     }
 
-    if(typeof a=== "number"){
-        console.log("A es un numero y puedo hacer operaciones");
-    }
-    if(typeof a=== "string"){
-        console.log("A es un texto  y puedo hacer operaciones con texto");
-    }
+ return arr;
 
-    if(typeof a=== "object"){
-        console.log("A es un obejto  y puedo hacer operaciones con objeto");
+}   
 
-        if(a instanceof Number){
-            console.log("Es un objeto ");
-        }
-    }
+var funciones = crearFunciones   ();
+
+funciones[0]();
+funciones[1]();
+funciones[2]();
 
 
-}
-
-
-var b = new Number(3);
-
-console.log(b);
-
-determinaDato()
