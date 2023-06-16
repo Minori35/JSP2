@@ -88,24 +88,56 @@
 
 // *********************************sobreCarga*************************
 
-function crearProducto(nombre, precio){
-    nombre = nombre || "sin nombre"
-    precio = precio || 0;
+// function crearProducto(nombre, precio){
+//     nombre = nombre || "sin nombre"
+//     precio = precio || 0;
 
-    console.log("Producto :", nombre, "precio", precio);
+//     console.log("Producto :", nombre, "precio", precio);
+
+// }
+
+// function crearProducto100(nombre){
+//     crearProducto(nombre, 100);
+// }
+
+// function crearProductoCamisa(precio){
+//     crearProducto("camisa", precio)
+// }
+
+
+// crearProducto("lapiz");
+// crearProducto100("Corrector");
+
+// crearProductoCamisa(100)
+
+// *********************************Polimotfismo*************************
+
+function determinaDato(){
+    if(a === undefined){
+        console.log("A es undefine.....no se que");
+    }
+
+    if(typeof a=== "number"){
+        console.log("A es un numero y puedo hacer operaciones");
+    }
+    if(typeof a=== "string"){
+        console.log("A es un texto  y puedo hacer operaciones con texto");
+    }
+
+    if(typeof a=== "object"){
+        console.log("A es un obejto  y puedo hacer operaciones con objeto");
+
+        if(a instanceof Number){
+            console.log("Es un objeto ");
+        }
+    }
+
 
 }
 
-function crearProducto100(nombre){
-    crearProducto(nombre, 100);
-}
 
-function crearProductoCamisa(precio){
-    crearProducto("camisa", precio)
-}
+var b = new Number(3);
 
+console.log(b);
 
-crearProducto("lapiz");
-crearProducto100("Corrector");
-
-crearProductoCamisa(100)
+determinaDato()
