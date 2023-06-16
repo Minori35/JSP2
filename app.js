@@ -144,27 +144,48 @@
 
 // *********************************Cuidado con las funciones y sus contextos*************************
 
-function crearFunciones(){
-    var arr = [];
-    var numero = 1;
+// function crearFunciones(){
+//     var arr = [];
+//     var numero = 1;
 
-    for(var numero =1 ; numero <=3; numero ++){
-        arr.push(
-            (function(numero){
-                return function(){
-                    console.log(numero)
-                } 
-            })(numero))
-    }
+//     for(var numero =1 ; numero <=3; numero ++){
+//         arr.push(
+//             (function(numero){
+//                 return function(){
+//                     console.log(numero)
+//                 } 
+//             })(numero))
+//     }
 
- return arr;
+//  return arr;
 
-}   
+// }   
 
-var funciones = crearFunciones   ();
+// var funciones = crearFunciones   ();
 
-funciones[0]();
-funciones[1]();
-funciones[2]();
+// funciones[0]();
+// funciones[1]();
+// funciones[2]();
+
+// *********************************Objetos number*************************
+
+var a = 10.45222;
+
+console.log(a.toFixed(5));
+
+a= a.toString();
+console.log(a);
+console.log(a.toPrecision(2));
+
+a = 10;
+a *= 100000000000;
+console.log(a);
+
+var b = new Number("20");
+
+console.log(b);
+console.log(b.valueOf());
+
+
 
 
