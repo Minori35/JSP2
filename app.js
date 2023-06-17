@@ -169,23 +169,65 @@
 
 // *********************************Objetos number*************************
 
-var a = 10.45222;
+// var a = 10.45222;
 
-console.log(a.toFixed(5));
+// console.log(a.toFixed(5));
 
-a= a.toString();
-console.log(a);
-console.log(a.toPrecision(2));
+// a= a.toString();
+// console.log(a);
+// console.log(a.toPrecision(2));
 
-a = 10;
-a *= 100000000000;
-console.log(a);
+// a = 10;
+// a *= 100000000000;
+// console.log(a);
 
-var b = new Number("20");
+// var b = new Number("20");
 
-console.log(b);
-console.log(b.valueOf());
+// console.log(b);
+// console.log(b.valueOf());
 
 
 
+// *********************************Objetos booleanos*************************
+
+// var a = new Boolean(1);
+
+// console.log(a.valueOf());
+
+// if(a ){
+//     console.log("Me imprimi");
+// }
+
+// *********************************Objetos string*************************
+var b = "Herrera"
+var a = new String("Sayra Yadira");
+console.log(a );
+
+console.log(a.toUpperCase());
+console.log(a.toLowerCase());
+
+// busqueda de letras en  un string 
+var i = a.indexOf("e");
+console.log("la letra :", i);
+
+//busqueda de letras repetidas en un string 
+i = a.lastIndexOf("n");
+console.log("la letra :", i);
+
+
+var nombre = a.substring(6);
+console.log(nombre);
+
+
+var nombre = a.substring(0,a.indexOf(" "));
+
+console.log(nombre);
+
+var split = a.split(" ");
+console.log(split);
+console.log(split.length);
+
+// **********************
+
+document.write(a.italics)
 
